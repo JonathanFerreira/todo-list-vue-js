@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import { Task } from '../models/Task'
+
   export default {
     data () {
       return {
