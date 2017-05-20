@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input class='new-todo' placeholder='O que preciso fazer?'>
+    <input class='new-todo' @keyup.enter='addTask'  placeholder='O que preciso fazer?'>
   </div>
 </template>
 
@@ -11,6 +11,15 @@
     data () {
       return {
 
+      }
+    },
+    methods: {
+      addTask ($event) {
+        let value = $event.target.value
+        let task = new Task()
+        task.completed = false
+        task.title = value
+        console.log(task)
       }
     }
   }

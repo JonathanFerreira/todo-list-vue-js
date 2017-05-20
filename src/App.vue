@@ -4,9 +4,8 @@
       <header class='header'>
         <h1>Tarefas</h1>
       </header>
-
+      <input-task></input-task>
     </section>
-    <router-view></router-view>
   </div>
 </template>
 
