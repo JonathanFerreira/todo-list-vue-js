@@ -11,9 +11,14 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import InputTask from './components/InputTask'
+
+  export default {
+    name: 'app',
+    components: {
+      InputTask
+    }
+  }
 </script>
 
 <style>
