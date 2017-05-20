@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # todo-list
 
 > Lista de tarefas em Vue.js
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# todo-list-vue-js
+Lista de tarefas utilizando Vue.js
