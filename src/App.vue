@@ -4,7 +4,7 @@
       <header class='header'>
         <h1>Tarefas</h1>
       </header>
-      <input-task></input-task>
+      <input-task @newTask='addTask'></input-task>
       <task-list :todo-list='tasks' ></task-list>
     </section>
   </div>
@@ -13,15 +13,6 @@
 <script>
   import InputTask from './components/InputTask'
   import TaskList from './components/TaskList'
-  import { Task } from './models/Task'
-
-  let tasks = []
-  let task = new Task()
-  task.completed = false
-  task.title = 'Tarefa'
-  tasks.push(task)
-  tasks.push(task)
-  tasks.push(task)
 
   export default {
     name: 'app',
@@ -31,7 +22,12 @@
     },
     data () {
       return {
-        tasks: tasks
+        tasks: []
+      }
+    },
+    methods: {
+      addTask (task) {
+        this.tasks.push(task)
       }
     }
   }
