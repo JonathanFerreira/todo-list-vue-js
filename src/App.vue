@@ -6,6 +6,7 @@
       </header>
       <input-task @newTask='addTask'></input-task>
       <task-list :todo-list='tasks' ></task-list>
+      <!-- <my-component></my-component> -->
     </section>
   </div>
 </template>
@@ -13,12 +14,14 @@
 <script>
   import InputTask from './components/InputTask'
   import TaskList from './components/TaskList'
+  import MyComponent from './components/MyComponent'
 
   export default {
     name: 'app',
     components: {
       InputTask,
-      TaskList
+      TaskList,
+      MyComponent
     },
     data () {
       return {
