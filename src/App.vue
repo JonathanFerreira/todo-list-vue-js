@@ -6,7 +6,7 @@
       </header>
       <input-task @newTask='addTask'></input-task>
       <task-list :todo-list='tasks' ></task-list>
-      <!-- <my-component></my-component> -->
+      <my-component></my-component>
     </section>
   </div>
 </template>

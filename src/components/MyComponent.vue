@@ -1,17 +1,27 @@
 <template>
-  <div v-if="new Date().getHours() <= 13 && new Date().getHours() >= 7">
-     Bom dia
-  </div>
-  <div v-else-if="new Date().getHours() > 13 && new Date().getHours() <= 18 ">
-   Boa tarde
-  </div>
-  <div v-else>
-   Boa noite
+  <div id="demo">
+    <label for="">teste</label>
+    <!-- <button v-on:click="show = !show">
+      Toggle
+    </button>
+    <transition name="fade">
+      <p v-if="show">Olá</p>
+    </transition> -->
   </div>
 </template>
-
 <script>
+export default {
+  el: '#demo',
+  data: {
+    show: true
+  }
+}
 </script>
-
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0
+}
 </style>
