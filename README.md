@@ -1,6 +1,6 @@
 # todo-list
 
-A simple todo-list using Vue.js
+Aplicação baseada no livro Vue.js - Construa aplicações incríves de Caio Incau - Casa do Código
 
 ## Build Setup
 
