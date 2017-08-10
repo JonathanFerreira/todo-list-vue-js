@@ -6,7 +6,8 @@
       </header>
       <input-task @newTask='addTask'></input-task>
       <task-list :todo-list='tasks' ></task-list>
-      <my-component></my-component>
+      <router-link class="cep" to="/cep">Verificar CEP</router-link>
+      <!-- <my-component></my-component> -->
     </section>
   </div>
 </template>
