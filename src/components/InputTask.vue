@@ -1,11 +1,12 @@
 <template>
   <div>
-    <input class='new-todo' @keyup.enter='addTask'  placeholder='O que preciso fazer?'>
+    <input class='new-todo' v-focus='true' @keyup.enter='addTask'  placeholder='O que preciso fazer?'>
   </div>
 </template>
 
 <script>
   import { Task } from '../models/Task'
+  import Focus from '../directives/focus'
 
   export default {
     data () {
@@ -22,6 +23,9 @@
         this.$emit('newTask', task)
         $event.target.value = ''
       }
+    },
+    directives: {
+      'focus': Focus
     }
   }
 </script>
