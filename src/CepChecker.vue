@@ -1,8 +1,14 @@
 <template>
   <section class="cepChecker">
     <label>Digite seu CEP</label>
-    <input type="text"></input>
+    <input @blur="checkCep" type="text"></input>
     <router-link class="home" to="/">Ver tarefas</router-link>
+    <div v-show="hasAddress()">
+      <p>Rua: {{ address.logradouro }}</p>
+      <p>Bairro: {{ address.bairro }}</p>
+      <p>Cidade: {{ address.cidade }}</p>
+      <p>Estado: {{ address.estado }}</p>
+    </div>
   </section>
 </template>
 
@@ -10,6 +16,21 @@
 export default {
   data () {
     return {
+      address: {}
+    }
+  },
+  methods: {
+    checkCep ($event) {
+      let cep = $event.target.value
+      this.$http.get('http://api.postmon.com.br/v1/cep/' + cep)
+      .then((res) => {
+        this.address = res.body
+      }, (res) => {
+        console.log(res)
+      })
+    },
+    hasAddress () {
+      return Object.keys(this.address).length > 0
     }
   }
 }
